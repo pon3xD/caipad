@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 300vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.theme-toggle:hover {
+    background: #555;
+}
+
+.dark-mode .theme-toggle {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.dark-mode .theme-toggle:hover {
+    background: #ddd;
+}
+
+/* Home Page Styles */
+.home-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .home-page {
+    background-color: #1a1a1a;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .logo {
+    color: #e0e0e0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .subtitle {
+    color: #bbb;
+}
+
+.url-input-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .url-input-container {
+    background: #2d2d2d;
+    border-color: #555;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.url-prefix {
+    font-size: 1.1rem;
+    color: #666;
+    padding: 0.5rem;
+    background-color: #f8f8f8;
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .url-prefix {
+    background-color: #444;
+    color: #ccc;
+    border-right-color: #666;
+}
+
+.pad-name-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    font-style: italic;
+    color: #999;
+    background: transparent;
+    transition: color 0.3s ease;
+}
+
+.pad-name-input:focus {
+    color: #333;
+    font-style: normal;
+}
+
+.dark-mode .pad-name-input {
+    color: #bbb;
+}
+
+.dark-mode .pad-name-input:focus {
+    color: #e0e0e0;
+}
+
+.go-button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.go-button:hover {
+    background-color: #004879;
+}
+
+.dark-mode .go-button {
+    background-color: #0099ff;
+}
+
+.dark-mode .go-button:hover {
+    background-color: #004879;
+}
+
+.no-login {
+    color: #666;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .no-login {
+    color: #bbb;
+}
+
+/* Editor Page Styles */
+.editor-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .editor-header {
+    background: #2d2d2d;
+    border-bottom-color: #555;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.editor-url {
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .editor-url {
+    color: #e0e0e0;
+}
+
+.url-text {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .url-text {
+    color: #bbb;
+}
+
+.pad-name {
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .pad-name {
+    color: #e0e0e0;
+}
+
+.editor-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-button {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #e0e0e0;
+}
+
+.dark-mode .home-button {
+    background: #444;
+    border-color: #666;
+    color: #e0e0e0;
+}
+
+.dark-mode .home-button:hover {
+    background-color: #555;
+}
+
+.stats {
+    font-size: 0.9rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .stats {
+    color: #bbb;
+}
+
+.notepad-textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 2rem;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background: white;
+    resize: none;
+    width: 100%;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.notepad-textarea:focus {
+    background: #fafafa;
+}
+
+.dark-mode .notepad-textarea {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-mode .notepad-textarea:focus {
+    background: #242424;
+}
+
+.save-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.save-indicator.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dark-mode .save-indicator {
+    background: #5CBF60;
+}
+
+.scroll-image {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+    z-index: 1000;
+    pointer-events: none; /* Para não interferir com outros elementos */
+}
+
+.scroll-image.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-image img {
+    width: 95vw; /* 100% da largura da tela */
+    height: 35vh; /* 35% da altura da tela */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 10px;
+        left: 10px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .url-input-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .url-prefix {
+        border-radius: 4px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .dark-mode .url-prefix {
+        border-bottom-color: #666;
+    }
+    
+    .pad-name-input {
+        text-align: center;
+    }
+    
+    .go-button {
+        border-radius: 4px;
+        width: 100%;
+    }
+    
+    .editor-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .editor-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .notepad-textarea {
+        padding: 1rem;
+        font-size: 16px;
+    }
+}

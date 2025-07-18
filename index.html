@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAIPAD - so pa informiticos</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle">🌙 modo amora</button>
+    
+    <div class="home-page" id="homePage">
+        <div class="container">
+            <h1 class="logo">CAIPAD</h1>
+            <p class="subtitle">sem captcha para os informiticos nao se irritarem</p>
+            
+            <div class="url-input-container">
+                <span class="url-prefix">caipad.com/</span>
+                <input type="text" id="padNameInput" placeholder="ruinato?" class="pad-name-input">
+                <button id="goButton" class="go-button">ides</button>
+            </div>
+            
+            <p class="no-login">nao preciza de loguine</p>
+        </div>
+    </div>
+    <div class="editor-page" id="editorPage" style="display: none;">
+        <div class="editor-header">
+            <div class="editor-url">
+                <span class="url-text">caipad.com/</span>
+                <span id="currentPadName" class="pad-name"></span>
+            </div>
+            <div class="editor-actions">
+                <button id="homeButton" class="home-button">← homo</button>
+                <div class="stats">
+                    <span id="charCount">0 personagens</span>
+                </div>
+            </div>
+        </div>
+        
+        <textarea 
+            id="notepad" 
+            class="notepad-textarea"
+            placeholder="escreve paqui"
+            spellcheck="false"
+        ></textarea>
+        
+        <div class="save-indicator" id="saveIndicator">
+            salvado
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div class="scroll-image" id="scrollImage">
+        <img src="img/like.png" alt="like romao" />
+    </div>
+</body>
+</html>
